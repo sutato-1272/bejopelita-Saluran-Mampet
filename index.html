@@ -20,13 +20,70 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Plumber",
-      "name": "BEJOPELITA Jasa Saluran Mampet & Sedot WC",
-      "image": "https://bejopelita-saluran-mampet.vercel.app/img/jasa-saluran-mampet-sedot-wc-jabodetabek-bejopelita.webp",
-      "url": "https://bejopelita-saluran-mampet.vercel.app/",
-      "telephone": "+6289530607936",
-      "priceRange": "$$",
-      "description": "Ahli jasa saluran mampet & sedot WC Jakarta, Depok, Tangerang. Pakai mesin spiral Ridgid, tanpa bongkar."
+      "@graph": [
+        {
+          "@type": "Plumber",
+          "@id": "https://bejopelita-saluran-mampet.vercel.app/#localbusiness",
+          "name": "BEJOPELITA Jasa Saluran Mampet & Sedot WC",
+          "image": "https://bejopelita-saluran-mampet.vercel.app/img/jasa-saluran-mampet-sedot-wc-jabodetabek-bejopelita.webp",
+          "url": "https://bejopelita-saluran-mampet.vercel.app/",
+          "telephone": "+6289530607936",
+          "priceRange": "$$",
+          "description": "Ahli jasa saluran mampet & sedot WC Jakarta, Depok, Tangerang. Pakai mesin spiral Ridgid, tanpa bongkar.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Komplek DDN II BLOK H No.21 RT.5/RW.5, Kecamatan Cilandak, Kelurahan Pondok Labu",
+            "addressLocality": "Jakarta Selatan",
+            "addressRegion": "DKI Jakarta",
+            "postalCode": "12450",
+            "addressCountry": "ID"
+          },
+          "areaServed": [
+            "DKI Jakarta",
+            "Kota Depok",
+            "Tangerang",
+            "Tangerang Selatan",
+            "Bogor"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Berapa biaya jasa saluran mampet di Jakarta?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Harga kami sangat transparan dan disesuaikan dengan tingkat keparahan sumbatan serta jarak lokasi. Kami menjamin harga terjangkau tanpa biaya tersembunyi. Silakan chat WA kami untuk estimasi langsung."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah layanan sedot WC buka 24 jam?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tentu saja! Masalah sanitasi tidak mengenal waktu. Armada sedot WC dan pelancar saluran mampet kami siaga 24/7 untuk panggilan darurat."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Benarkah proses pelancar pipa dilakukan tanpa bongkar lantai?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Benar 100%. Kami menggunakan Mesin Spiral (Drain Cleaner) Rooter canggih yang masuk langsung ke dalam pipa PVC untuk menghancurkan kotoran, sehingga keramik dan lantai rumah Anda tetap utuh."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah hasil pekerjaan BEJOPELITA bergaransi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Kami memberikan garansi tuntas. Sistem kami adalah: teknisi bekerja, saluran dipastikan mengalir lancar (plong), Anda cek hasilnya, baru Anda bayar."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
 
@@ -44,7 +101,6 @@
         .grid{display:grid;gap:1.5rem}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}
         .mb-4{margin-bottom:1rem}.mb-8{margin-bottom:2rem}
         
-        /* FIX HIERARKI HERO */
         .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1; opacity: 0.65;} 
         .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom, rgba(2,6,23,0.4), rgba(2,6,23,0.9));z-index:2}
         .hero-content{position:relative;z-index:3;max-width:1000px;padding:0 1rem; margin-top: 50px;}
@@ -54,7 +110,7 @@
         
         .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:1.2rem 2.5rem;border-radius:999px;font-weight:800;text-decoration:none;text-transform:uppercase;transition:.3s;color:#fff; letter-spacing: 1px;}
         .btn-wa{background:#16a34a; border:2px solid #16a34a; box-shadow: 0 4px 20px rgba(22,163,74,0.5); font-size: 1.1rem; width: 100%; max-width: 500px; margin: 0 auto;}
-        .btn-sm{padding: 0.6rem 1.2rem; font-size: 0.85rem; border-radius: 8px;}
+        .btn-sm{padding: 0.6rem 1.2rem; font-size: 0.85rem; border-radius: 8px; background:#ea580c; border: 2px solid #ea580c;}
         
         .trust-badge{display:flex; justify-content:center; gap: 1.5rem; margin-top: 1.5rem; font-weight: 700; color: #fbbf24; flex-wrap: wrap;}
         .card{background:#1e293b; border:1px solid var(--border); border-radius:1rem; padding:2rem; transition: transform 0.3s;}
@@ -74,9 +130,6 @@
         th, td { padding: 1rem; border: 1px solid var(--border); text-align: left; }
         th { background: var(--darker); color: var(--primary); font-family: 'Rajdhani', sans-serif; font-size: 1.1rem; }
         .table-responsive { overflow-x: auto; width: 100%; }
-
-        .escape-hatch { display: inline-block; margin-top: 1.5rem; color: #94a3b8; font-size: 0.9rem; text-align:center; width:100%; }
-        .escape-hatch a { color: var(--primary); text-decoration: underline; font-weight: bold; }
         
         details {background: #1e293b; border: 1px solid var(--border); border-radius: 0.5rem; margin-bottom: 1rem; overflow: hidden;}
         summary {padding: 1.2rem; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;}
@@ -195,84 +248,84 @@
         <div class="container">
             <div class="text-center mb-8">
                 <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem;">SOLUSI SPESIFIK <span class="text-primary">AREA ANDA</span></h2>
-                <p style="color: #94a3b8; max-width: 600px; margin: 0 auto;">Jaringan penanganan BEJOPELITA terspesialisasi di berbagai sudut Jabodetabek. Pilih area Anda untuk bantuan cepat.</p>
+                <p style="color: #94a3b8; max-width: 600px; margin: 0 auto;">Jaringan penanganan BEJOPELITA terspesialisasi di berbagai sudut Jabodetabek. Pelajari selengkapnya:</p>
             </div>
 
             <div class="grid grid-3">
-                <a href="https://wa.me/6289530607936?text=Halo%20BEJOPELITA,%20tolong%20darurat%20saluran%20mampet%20di%20area%20Jakarta%20Selatan." target="_blank" rel="noopener noreferrer" class="area-card">
+                <a href="https://sutato02.dongkrakbisnis.com/produk/894764/jasa-saluran-mampet-bogor-bergaransi/" target="_blank" rel="noopener noreferrer" class="area-card">
                     <img src="img/perbaikan-saluran-mampet-wastafel-apartemen-jakarta-selatan.webp" alt="Tukang perbaikan saluran mampet wastafel apartemen di Jakarta Selatan" class="area-img" loading="lazy" decoding="async" width="800" height="600">
                     <div class="area-content">
                         <div>
                             <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 0.5rem;">Jakarta Selatan</h3>
-                            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 1rem;">Solusi Perbaikan Wastafel Apartemen.</p>
+                            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 1rem;">Solusi Perbaikan Wastafel Apartemen Tanpa Bongkar.</p>
                         </div>
-                        <span class="btn btn-wa btn-sm" style="width:100%; text-align:center;">📍 PANGGIL TEKNISI KEMARI</span>
+                        <span class="btn btn-wa btn-sm" style="width:100%; text-align:center;">📍 BACA SELENGKAPNYA</span>
                     </div>
                 </a>
                 
-                <a href="https://wa.me/6289530607936?text=Halo%20BEJOPELITA,%20tolong%20darurat%20saluran%20mampet%20di%20area%20Jakarta%20Barat/Utara." target="_blank" rel="noopener noreferrer" class="area-card">
+                <a href="https://sutato02.dongkrakbisnis.com/produk/896790/jasa-sedot-wc-grease-trap-jakarta-barat-utara-24-jam/" target="_blank" rel="noopener noreferrer" class="area-card">
                     <img src="img/jasa-sedot-wc-grease-trap-restoran-jakarta-barat.webp" alt="Jasa sedot wc dan pembersihan grease trap lemak restoran Jakarta Barat Utara" class="area-img" loading="lazy" decoding="async" width="800" height="600">
                     <div class="area-content">
                         <div>
                             <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 0.5rem;">Jakbar & Utara</h3>
-                            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 1rem;">Layanan Sedot Grease Trap Restoran.</p>
+                            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 1rem;">Layanan Sedot Grease Trap Restoran 24 Jam.</p>
                         </div>
-                        <span class="btn btn-wa btn-sm" style="width:100%; text-align:center;">📍 PANGGIL TEKNISI KEMARI</span>
+                        <span class="btn btn-wa btn-sm" style="width:100%; text-align:center;">📍 BACA SELENGKAPNYA</span>
                     </div>
                 </a>
 
-                <a href="https://wa.me/6289530607936?text=Halo%20BEJOPELITA,%20tolong%20darurat%20saluran%20mampet%20di%20area%20Jakarta%20Timur." target="_blank" rel="noopener noreferrer" class="area-card">
+                <a href="https://sutato02.dongkrakbisnis.com/produk/896797/saluran-air-mampet-jakarta-timur-alat-ridgid/" target="_blank" rel="noopener noreferrer" class="area-card">
                     <img src="img/pembersihan-selokan-bak-kontrol-mampet-jakarta-timur.webp" alt="Pembersihan selokan dan bak kontrol mampet menggunakan mesin ridgid Jakarta Timur" class="area-img" loading="lazy" decoding="async" width="800" height="600">
                     <div class="area-content">
                         <div>
                             <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 0.5rem;">Jakarta Timur</h3>
-                            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 1rem;">Ahli Mesin Ridgid untuk Bak Kontrol Mampet.</p>
+                            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 1rem;">Saluran Air Mampet Menggunakan Alat Ridgid.</p>
                         </div>
-                        <span class="btn btn-wa btn-sm" style="width:100%; text-align:center;">📍 PANGGIL TEKNISI KEMARI</span>
+                        <span class="btn btn-wa btn-sm" style="width:100%; text-align:center;">📍 BACA SELENGKAPNYA</span>
                     </div>
                 </a>
 
-                <a href="https://wa.me/6289530607936?text=Halo%20BEJOPELITA,%20tolong%20darurat%20saluran%20mampet%20di%20area%20Depok." target="_blank" rel="noopener noreferrer" class="area-card">
+                <a href="https://sutato02.dongkrakbisnis.com/produk/896812/jasa-sedot-wc-saluran-mampet-depok-24-jam/" target="_blank" rel="noopener noreferrer" class="area-card">
                     <img src="img/jasa-sedot-wc-rumah-tangga-cepat-depok.webp" alt="Panggilan jasa sedot wc mampet rumah tangga cepat di Depok" class="area-img" loading="lazy" decoding="async" width="800" height="600">
                     <div class="area-content">
                         <div>
                             <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 0.5rem;">Kota Depok</h3>
-                            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 1rem;">Panggilan Darurat WC Mampet 24 Jam.</p>
+                            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 1rem;">Panggilan Jasa Sedot WC Saluran Mampet 24 Jam.</p>
                         </div>
-                        <span class="btn btn-wa btn-sm" style="width:100%; text-align:center;">📍 PANGGIL TEKNISI KEMARI</span>
+                        <span class="btn btn-wa btn-sm" style="width:100%; text-align:center;">📍 BACA SELENGKAPNYA</span>
                     </div>
                 </a>
 
-                <a href="https://wa.me/6289530607936?text=Halo%20BEJOPELITA,%20tolong%20darurat%20saluran%20mampet%20di%20area%20Tangerang." target="_blank" rel="noopener noreferrer" class="area-card">
+                <a href="https://sutato02.dongkrakbisnis.com/produk/896813/pelancar-wc-tangerang-tanpa-bongkar/" target="_blank" rel="noopener noreferrer" class="area-card">
                     <img src="img/ahli-pipa-paralon-mampet-pelancar-saluran-tangerang.webp" alt="Ahli pelancar pipa paralon saluran air mampet tanpa bongkar Tangerang" class="area-img" loading="lazy" decoding="async" width="800" height="600">
                     <div class="area-content">
                         <div>
                             <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 0.5rem;">Tangerang</h3>
-                            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 1rem;">Pelancar Pipa Paralon Tanpa Bongkar.</p>
+                            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 1rem;">Pelancar WC dan Pipa Paralon Tanpa Bongkar.</p>
                         </div>
-                        <span class="btn btn-wa btn-sm" style="width:100%; text-align:center;">📍 PANGGIL TEKNISI KEMARI</span>
+                        <span class="btn btn-wa btn-sm" style="width:100%; text-align:center;">📍 BACA SELENGKAPNYA</span>
                     </div>
                 </a>
 
-                <a href="https://wa.me/6289530607936?text=Halo%20BEJOPELITA,%20tolong%20darurat%20saluran%20mampet%20di%20DKI%20Jakarta." target="_blank" rel="noopener noreferrer" class="area-card">
+                <a href="https://sutato02.dongkrakbisnis.com/produk/896814/jasa-tukang-saluran-mampet-sedot-wc-jakarta-24-jam/" target="_blank" rel="noopener noreferrer" class="area-card">
                     <img src="img/tukang-saluran-mampet-sedot-wc-24-jam-jakarta.webp" alt="Armada darurat 24 jam tukang saluran mampet dan sedot wc DKI Jakarta" class="area-img" loading="lazy" decoding="async" width="800" height="600">
                     <div class="area-content">
                         <div>
                             <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 0.5rem;">DKI Jakarta</h3>
-                            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 1rem;">Tukang Saluran Mampet & Sedot WC Siaga.</p>
+                            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 1rem;">Tukang Saluran Mampet & Sedot WC Siaga 24 Jam.</p>
                         </div>
-                        <span class="btn btn-wa btn-sm" style="width:100%; text-align:center;">📍 PANGGIL TEKNISI KEMARI</span>
+                        <span class="btn btn-wa btn-sm" style="width:100%; text-align:center;">📍 BACA SELENGKAPNYA</span>
                     </div>
                 </a>
 
-                <a href="https://wa.me/6289530607936?text=Halo%20BEJOPELITA,%20tolong%20darurat%20saluran%20mampet%20di%20area%20Jakarta%20Pusat." target="_blank" rel="noopener noreferrer" class="area-card card-center">
+                <a href="https://sutato02.dongkrakbisnis.com/produk/897016/spesialis-deteksi-pipa-bocor-jakarta-pusat-akurat/" target="_blank" rel="noopener noreferrer" class="area-card card-center">
                     <img src="img/spesialis-deteksi-pipa-bocor-bawah-tanah-jakarta-pusat.webp" alt="Spesialis deteksi pipa air bocor bawah tanah menggunakan acoustics leak detector Jakarta Pusat" class="area-img" loading="lazy" decoding="async" width="800" height="600">
                     <div class="area-content">
                         <div>
                             <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 0.5rem;">Jakarta Pusat</h3>
-                            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 1rem;">Deteksi Pipa Bocor Bawah Tanah Akurat.</p>
+                            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 1rem;">Spesialis Deteksi Pipa Bocor Bawah Tanah Akurat.</p>
                         </div>
-                        <span class="btn btn-wa btn-sm" style="width:100%; text-align:center;">📍 PANGGIL TEKNISI KEMARI</span>
+                        <span class="btn btn-wa btn-sm" style="width:100%; text-align:center;">📍 BACA SELENGKAPNYA</span>
                     </div>
                 </a>
             </div>
@@ -319,15 +372,19 @@
                             Jakarta Selatan, Kode Pos 12450
                         </p>
                     </div>
+                    
+                    <div style="margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px dashed rgba(255,255,255,0.1);">
+                        <h3 style="font-size: 1.1rem; color: #94a3b8; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">🌐 Website Resmi:</h3>
+                        <a href="https://www.bejopelita.web.id" target="_blank" rel="noopener noreferrer" style="color: #60a5fa; font-weight: 800; font-size: 1.2rem; text-decoration: none; display: block; transition: 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#60a5fa'">www.bejopelita.web.id</a>
+                    </div>
+
                     <div style="margin-bottom: 2rem;">
                         <h3 style="font-size: 1.1rem; color: #94a3b8; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">📞 Telepon Darurat:</h3>
                         <a href="tel:6289530607936" style="color: var(--primary); font-weight: 800; font-size: 1.8rem; text-decoration: none; display: block;">0895-3060-7936</a>
-                       
                     </div>
                     <div>
                         <h3 style="font-size: 1.1rem; color: #94a3b8; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">📲 WhatsApp (Fast Response):</h3>
                         <a href="https://wa.me/6289530607936?text=Halo%20BEJOPELITA,%20saya%20butuh%20bantuan%20darurat." target="_blank" rel="noopener noreferrer" style="color: #22c55e; font-weight: 800; font-size: 1.8rem; text-decoration: none; display: block; margin-bottom: 0.3rem;">0895-3060-7936</a>
-                        
                     </div>
                 </div>
             </div>
